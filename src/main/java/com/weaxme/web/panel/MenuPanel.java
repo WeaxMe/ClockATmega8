@@ -1,7 +1,13 @@
-package com.weaxme.web;
+package com.weaxme.web.panel;
 
+import com.weaxme.web.AboutPage;
+import com.weaxme.web.BrowseClock;
+import com.weaxme.web.SettingsPage;
+import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
+import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * @author Vitaliy Gonchar
@@ -26,6 +32,12 @@ public class MenuPanel extends Panel {
             @Override
             public void onClick() {
                 setResponsePage(AboutPage.class);
+            }
+        });
+        add(new Link("signOut") {
+            @Override
+            public void onClick() {
+                AuthenticatedWebSession.get().signOut();
             }
         });
     }

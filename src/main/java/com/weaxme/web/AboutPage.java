@@ -1,5 +1,8 @@
 package com.weaxme.web;
 
+import org.apache.wicket.Application;
+import org.apache.wicket.AttributeModifier;
+import org.apache.wicket.Localizer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
@@ -9,6 +12,10 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public class AboutPage extends BasePage {
     public AboutPage(PageParameters parameters) {
         super(parameters);
-        add(new Label("aboutLabel", "About page"));
+        Localizer localizer = Application.get().getResourceSettings().getLocalizer();
+        add(new Label("title", localizer.getString("button.about", this)));
+        Label label = new Label("aboutLabel", "About page");
+        label.add(new AttributeModifier("style", "color:red;font-weight:bold"));
+        add(label);
     }
 }

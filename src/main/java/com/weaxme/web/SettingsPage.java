@@ -9,6 +9,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public class SettingsPage extends BasePage {
     public SettingsPage(PageParameters parameters) {
         super(parameters);
+        add(new Label("title", "Settings"));
         add(new Label("settingsLabel", "Settings"));
     }
 }
