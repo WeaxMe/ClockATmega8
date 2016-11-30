@@ -1,0 +1,39 @@
+<html xmlns:wicket="http://wicket.apache.org">
+
+    <wicket:panel>
+
+        <form class="clockEditForm" method="get" wicket:id="clockEditForm">
+            <div>
+                <label for="name">Name:</label>
+            </div>
+            <div>
+                <input wicket:id="name" type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="ip">IP:</label>
+            </div>
+            <div>
+                <input wicket:id="ip" type="text" name="ip" id="ip">
+            </div>
+            <div>
+                <label for="port">PORT:</label>
+            </div>
+            <div>
+                <input wicket:id="port" type="text" name="port" id="port">
+            </div>
+            <div>
+                <span wicket:id="setTimeLabel"></span>
+                <select wicket:id="hours"></select>
+                <select wicket:id="minutes"></select>
+                <select wicket:id="seconds"></select>
+            </div>
+            <div>
+                <input class="saveButton" type="submit" value="Save">
+                <a class="cancelButton" wicket:id="cancel">Cancel</a>
+            </div>
+            <div class="result" wicket:id="result"></div>
+        </form>
+
+    </wicket:panel>
+
+</html>

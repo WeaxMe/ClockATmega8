@@ -12,10 +12,14 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public class AboutPage extends BasePage {
     public AboutPage(PageParameters parameters) {
         super(parameters);
-        Localizer localizer = Application.get().getResourceSettings().getLocalizer();
-        add(new Label("title", localizer.getString("button.about", this)));
+    }
+
+    @Override
+    protected void onInitialize() {
+        title.setDefaultModelObject("About");
         Label label = new Label("aboutLabel", "About page");
         label.add(new AttributeModifier("style", "color:red;font-weight:bold"));
         add(label);
+        super.onInitialize();
     }
 }

@@ -30,12 +30,13 @@ public class LoginPage extends BasePage {
     @Override
     protected void onInitialize() {
         super.onInitialize();
+        title.setDefaultModelObject("Login in ATmega8Clock");
         if (menuPanel.isVisible()) menuPanel.setVisible(false);
-        add(new Label("title", "Login in ATmega8Clock"));
         ContextImage image = new ContextImage("atmega8", "atmega8.png");
         SignInPanel signInPanel = new SignInPanel("signInPanel");
         signInPanel.setRememberMe(false);
         add(signInPanel);
         add(image);
+
     }
 }

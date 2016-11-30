@@ -3,9 +3,144 @@
 }
 
 .basePage {
-    background-color: #fff1e4;
+    background-color: #eee;
 }
 
 .mainMenu {
     text-align: center;
+}
+
+.clockEditForm {
+    text-align: center;
+    padding: 5px 20px 5px 10px;
+    margin-top: 5px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+.menuButton {
+    font-size: 16px;
+    color:#fff;
+    margin-left: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: black;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.menuButton:hover{
+    color:blue;
+    background-color: white;
+}
+
+.data {
+    padding: 5px 0px 5px 10px;
+    border-radius: 5px;
+    background-color: #43CBC4;
+}
+
+.data:hover {
+    background-color: aqua;
+}
+
+.main {
+    max-width: 960px;
+    margin: auto;
+}
+
+.checkBox {
+    float: left;
+}
+
+.editButton,
+.cancelButton,
+.saveButton,
+.menuClockBut,
+.clockName,
+.address,
+.time {
+    font-size: 16px;
+    font-family: Verdana;
+}
+
+.menuClockBut {
+    float: left;
+    color: white;
+    margin-left: -11px;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    background-color: blue;
+    margin-top: -16px;
+    margin-right: 25px;
+}
+
+.menuClockBut:hover {
+    color: white;
+    background-color: #64505B;
+}
+
+.saveButton,
+.cancelButton {
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    background-color: blue;
+    margin-top: 5px;
+}
+
+.editButton {
+    float: right;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    background-color: blue;
+    margin-top: -5px;
+}
+
+.cancelButton:hover,
+.saveButton:hover,
+.editButton:hover {
+    color: white;
+    background-color: #64505B;
+}
+
+.clockName {
+    margin-left: 3px;
+}
+
+.address {
+    margin-left: 90px;
+}
+
+.time {
+    margin-left: 50%;
+}
+
+.result {
+    font-size: 16px;
+    font-family: Verdana;
+    color: red;
+}
+
+.main-content{
+    width:900px;
+    margin:0 auto;
+}
+input {
+    display: inline-block;
+}
+
+label{
+    display: inline-block;
 }
