@@ -144,3 +144,17 @@ input {
 label{
     display: inline-block;
 }
+
+.but {
+    float: left;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    background-color: blue;
+}
+
+.but:hover {
+    color: white;
+    background-color: #64505B;
+}

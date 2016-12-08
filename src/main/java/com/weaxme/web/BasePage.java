@@ -1,15 +1,12 @@
 package com.weaxme.web;
 
 import com.weaxme.web.panel.MenuPanel;
-import org.apache.wicket.Application;
 import org.apache.wicket.Component;
-import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
-import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.head.CssReferenceHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.resource.CssResourceReference;
 
 public abstract class BasePage extends WebPage {
@@ -37,12 +34,12 @@ public abstract class BasePage extends WebPage {
 		response.render(CssReferenceHeaderItem.forReference(MAIN_CSS));
 	}
 
-	@Override
-	protected void onConfigure() {
-		super.onConfigure();
-		AuthenticatedWebApplication app = (AuthenticatedWebApplication) Application.get();
-		if (!AuthenticatedWebSession.get().isSignedIn() && !getClass().equals(LoginPage.class)) {
-			app.restartResponseAtSignInPage();
-		}
-	}
+//	@Override
+//	protected void onConfigure() {
+//		super.onConfigure();
+//		AuthenticatedWebApplication app = (AuthenticatedWebApplication) Application.get();
+//		if (!AuthenticatedWebSession.get().isSignedIn() && !getClass().equals(LoginPage.class)) {
+//			app.restartResponseAtSignInPage();
+//		}
+//	}
 }
