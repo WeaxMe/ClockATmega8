@@ -1,0 +1,12 @@
+AT										// status
+AT+CWQAP								// disconnect from wifi-host
+AT+CWMODE=3								// 1 - client 2- server 3 - both
+AT+CWSAP="ESP_CLOCK","12345678",1,4 	// create wifi-host
+AT+CIPMODE=0 							// server can send data to client
+AT+CIPMUX=1 							// 0 - one connection 1 - 4 connection
+AT+CIPSERVER=1,8888						// open port
+
+AT+CIOBAUD=9600 						// speed
+AT+CIPSEND=0,12							// send data 0 - client id 	8888 - data length
+AT+CIFSR 								// get ip
+AT+CIPSTATUS							// active connection
